@@ -1,2 +1,4 @@
 github.com/Franklynoble/todocli v0.0.0-20220824223559-e42cad759b73 h1:+Os54d4L8eftvkH3yYkf3lZYwQlK1fKFSYRbJnu6lzg=
 github.com/Franklynoble/todocli v0.0.0-20220824223559-e42cad759b73/go.mod h1:xbtMOEIK9cCh6unqnPxz2vt8hH3r1PNVPh+I84bHX7Q=
+golang.org/x/text v0.3.7 h1:olpwvP2KacW1ZWvsR7uQhoyTYvKAupfQrRGBFM352Gk=
+golang.org/x/text v0.3.7/go.mod h1:u+2+/6zg+i71rQMx5EYifcz6MCKuco9NR6JIITiCfzQ=
