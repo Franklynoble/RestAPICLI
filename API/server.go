@@ -4,13 +4,28 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
+	"sync"
 )
 
+/*
+a new variable mu as a pointer to a sync.Mutex type. The pointer to Mutex implements
+the interface sync.Locker, so you can use it as an input to the todoRouter() function.
+Then use the variables mu and todoFile to run the function todoRouter(), assigning
+its output to a variable t. Finally, use the variable t in the function http.StripPrefix()
+to strip the /todo prefix from the URL path, passing its output to the method
+*/
 func newMux(todoFile string) http.Handler {
 
 	m := http.NewServeMux()
 
+	mu := &sync.Mutex{}
+
 	m.HandleFunc("/", rootHandler)
+
+	t := todoRouter(todoFile, mu)
+
+	m.Handle("/todo", http.StripPrefix("/todo", t))
+	m.Handle("/todo/", http.StripPrefix("/todo/", t))
 
 	return m
 }
