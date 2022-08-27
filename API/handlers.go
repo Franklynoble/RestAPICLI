@@ -23,7 +23,7 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 		return
 
 	}
-	content := "There is  An API here"
+	content := "There's  An API here"
 	replyTextContent(w, r, http.StatusOK, content)
 
 }
