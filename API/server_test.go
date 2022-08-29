@@ -66,7 +66,7 @@ func TestGet(t *testing.T) {
 		{
 			name: "GetRoot", path: "/",
 			expCode:    http.StatusOK,
-			expContent: "There's  an API here",
+			expContent: "There's  An API here",
 		},
 		{
 			name: "GetAll", path: "/todo",
